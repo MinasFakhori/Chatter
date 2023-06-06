@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:fillViewport="true"
+    tools:context="domains.brighton.mf600.chatter.SignUp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/sign_up_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="@string/hey_there_create_an_account"
+            android:textColor="@color/grey"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sign_up_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="@string/password_must_contain_at_least_8_characters_1_uppercase_1_lowercase_1_number_and_1_special_character"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_email"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_title" />
+
+        <EditText
+            android:id="@+id/sign_up_email"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/sign_up_password"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:autofillHints="password"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/confirm_password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_margin="20dp"
+            android:autofillHints="password"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@id/sign_up_password"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/sign_up_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/your_birthday"
+            android:textColor="@color/grey"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/confirm_password" />
+
+        <EditText
+            android:id="@+id/sign_up_age_day"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="day"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/dd"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/sign_up_age_month"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_age" />
+
+        <EditText
+            android:id="@+id/sign_up_age_month"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:autofillHints="month"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/mm"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_age" />
+
+        <EditText
+            android:id="@+id/sign_up_age_year"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:autofillHints="year"
+            android:background="@drawable/rounded_edittext"
+            android:elevation="35dp"
+            android:hint="@string/yyyy"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toRightOf="@id/sign_up_age_month"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_age" />
+
+        <Button
+            android:id="@+id/sign_up_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="60dp"
+            android:background="@drawable/btn_transparent"
+            android:contentDescription="@string/sign_up_button"
+            android:elevation="35dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_age_month" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
